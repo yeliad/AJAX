@@ -1,0 +1,22 @@
+# file: app/views/things/_form.html.erb
+
+<%= form_for(@thing, remote: true, format: :json, html: {class: :thing_form}) do |f| %>
+
+  <div id="error_explanation" style='display:none;'>
+    <ul>
+      <% if @thing.errors.any? %>
+        <% @thing.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      <% end %>
+    </ul>
+  </div>
+
+  <div class="field">
+    <%= f.label :title %><br>
+    <%= f.text_field :title %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

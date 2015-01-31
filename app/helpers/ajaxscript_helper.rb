@@ -1,0 +1,2 @@
+module AjaxscriptHelper
+end

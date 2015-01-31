@@ -1,0 +1,18 @@
+<table class='table' id='result_table'>
+  <thead>
+    <tr>
+      <th>First name</th>
+      <th>Last name</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% items.each do |person| %>
+      <%# Render table row partial for each person object %>
+      <%= render partial: 'results_table_row', locals: {person: person} %>
+    <% end %>
+  </tbody>
+</table>
